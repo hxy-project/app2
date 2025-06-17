@@ -1,0 +1,123 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+address,
+button {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i {
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  width: 100%;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  --body-font-size: 100;
+  --page-top-padding: 110px;
+  --section-min-height: max(100vh, 600px);
+  --section-min-height-without-top: -moz-calc(
+    max(100vh, 600px) - var(--page-top-padding)
+  );
+  --section-min-height-without-top: calc(
+    max(100vh, 600px) - var(--page-top-padding)
+  );
+}
+dl,
+dt,
+em,
+li {
+  list-style-type: none;
+  font-style: normal;
+}
+
+@media only screen and (min-width: 2560px), (min-height: 1330px) {
+  html {
+    --body-font-size: 120;
+  }
+}
+@media only screen and (max-width: 1536px), (max-height: 754px) {
+  html {
+    --body-font-size: 90;
+    --page-top-padding: 100px;
+  }
+  .roborock_app_headernav {
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 1280px), (max-height: 600px) {
+  html {
+    --body-font-size: 80;
+  }
+}
+@media only screen and (max-width: 750px), (max-height: 500px) {
+  html {
+    --body-font-size: 50;
+  }
+}
+@media only screen and (max-width: 750px) {
+  html {
+    --section-min-height: 100vh;
+  }
+}
+html {
+  --content-width: min(
+    -moz-calc(var(--body-font-size) * 16px),
+    -moz-calc(100vw - 64px)
+  );
+  --content-width: min(calc(var(--body-font-size) * 16px), calc(100vw - 64px));
+  --full-margin: -moz-calc((100vw - var(--content-width)) / -2);
+  --full-margin: calc((100vw - var(--content-width)) / -2);
+}
+@media only screen and (max-width: 750px) {
+  html {
+    --content-width: -moz-calc(100vw - 18px);
+    --content-width: calc(100vw - 18px);
+  }
+}
+body {
+  overflow-x: hidden;
+  /* background: #f5f5f5; */
+  scroll-behavior: smooth;
+  /* background: -webkit-linear-gradient(top, #f4f4f4 0%, #ffffff 120vh);
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #ffffff 120vh);
+  background: linear-gradient(180deg, #f4f4f4, #fff 120vh); */
+}
