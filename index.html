@@ -5681,11 +5681,23 @@
 
             .wave-box {
                 position: relative;
-                background-color: #f2f7ff;
+                background: linear-gradient(to bottom, #f9fbff 0%, #f9fbff 85%, #f1f7ff 100%);
                 text-align: center;
                 overflow: hidden;
             }
-
+            .wave-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffffff" d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z"/></svg>') no-repeat top center;
+  background-size: cover;
+  transform: rotate(180deg);
+  pointer-events: none;
+  z-index: 1;
+}
             .wave-box::after {
                 content: "";
                 position: absolute;
@@ -6151,9 +6163,7 @@
                                         <a href="#" target="_blank" download class="flex-box align-items-c">
                                             <img src="./assets/website/bestAppBox/images/pdf-load.png"
                                                 class="mr-41 pdf-img">
-                                            <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-R APP WI-FI
-                                                connection guide, suitable for intelligent digital display control
-                                                panel, compatible with IOS and Android</p>
+                                            <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-Lite APP WI-FI connection guide, suitable for intelligent digital display control panel, compatible with IOS and Android</p>
                                         </a>
                                     </div>
                                 </div>
@@ -6165,16 +6175,14 @@
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                         <div class="youtube-text">
-                                            <p class="OPPO-Sans font-w-600 font-size-24 color-w">AlorAir-Lite WiFi Connect for Small LCD Screen Dehumidifier</p>
+                                            <p class="OPPO-Sans font-w-600 font-size-24 color-w">AlorAir-Lite WiFi Connect for Big LCD Screen Dehumidifier</p>
                                         </div>
                                     </div>
                                     <div>
                                         <a href="#" target="_blank" download class="flex-box align-items-c">
                                             <img src="./assets/website/bestAppBox/images/pdf-load.png"
                                                 class="mr-41 pdf-img">
-                                            <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-R APP WI-FI
-                                                connection guide, suitable for intelligent digital display control
-                                                panel, compatible with IOS and Android</p>
+                                            <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-Lite APP WI-FI connection guide, suitable for simple digital display control panel, compatible with IOS and Android</p>
                                         </a>
                                     </div>
                                 </div>
