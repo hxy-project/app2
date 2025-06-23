@@ -5202,11 +5202,13 @@
         <!-- 这里写css样式及内容-->
         <!-- txt1 -->
         <link rel="stylesheet" href="./assets/website/bestAppBox/references/base.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/website/bestAppBox/references/swiper.css" />
         <link rel="stylesheet" href="./assets/website/bestAppBox/references/faq.css">
         <link rel="stylesheet" href="./assets/website/bestAppBox/references/animate.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="./assets/website/bestAppBox/references/owl.carousel.min.css">
+        <script src="./assets/website/bestAppBox/references/swiper.js"></script>
         <script src="./assets/website/bestAppBox/references/wow.min.js"></script>
+        <script src="./assets/website/bestAppBox/references/owl.carousel.min.js"></script>
         <style>
             @font-face {
                 font-family: Inter-Regular;
@@ -5685,19 +5687,21 @@
                 text-align: center;
                 overflow: hidden;
             }
+
             .wave-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffffff" d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z"/></svg>') no-repeat top center;
-  background-size: cover;
-  transform: rotate(180deg);
-  pointer-events: none;
-  z-index: 1;
-}
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffffff" d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z"/></svg>') no-repeat top center;
+                background-size: cover;
+                transform: rotate(180deg);
+                pointer-events: none;
+                z-index: 1;
+            }
+
             .wave-box::after {
                 content: "";
                 position: absolute;
@@ -5738,117 +5742,191 @@
                 margin-bottom: calc(var(--body-font-size) * .68px);
             }
 
-           .grid-4-box{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 18px;
-         }
+            .grid-4-box {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 18px;
+            }
+
             .product-item {
                 padding: calc(var(--body-font-size) * .20px) calc(var(--body-font-size) * .12px) calc(var(--body-font-size) * .37px);
                 border-radius: 10px;
                 background: #FAFAFA;
-               
+
             }
-.mb-18{
-    margin-bottom: calc(var(--body-font-size) * .18px);
-}
-.img-max-258{
-    max-width: calc(var(--body-font-size) * 2.58px);
-}
-.font-size-22 {
+
+            .mb-18 {
+                margin-bottom: calc(var(--body-font-size) * .18px);
+            }
+
+            .img-max-258 {
+                max-width: calc(var(--body-font-size) * 2.58px) !important;
+            }
+
+            .font-size-22 {
                 font-size: calc(var(--body-font-size) * .22px);
             }
-            .color-33{
+
+            .color-33 {
                 color: #333333;
             }
-            .mb-5{
+
+            .mb-5 {
                 margin-bottom: 5px !important;
             }
+
             iframe {
                 aspect-ratio: 16 / 9;
                 border-radius: 10px 10px 0px 0px;
             }
+
             .youtube-text {
                 background-color: #000000;
                 padding: calc(var(--body-font-size) * .28px) calc(var(--body-font-size) * .27px);
                 border-radius: 0px 0px 20px 20px;
             }
-            .mb-75{
+
+            .mb-75 {
                 margin-bottom: calc(var(--body-font-size) * .75px);
             }
-            .line-height-150{
-      line-height: 150%;
+
+            .line-height-150 {
+                line-height: 150%;
             }
-            .how-box,.faq-box,.why-choose-box,.checkout-box{
+
+            .how-box,
+            .faq-box,
+            .why-choose-box,
+            .checkout-box {
                 padding: 20px;
             }
+
             /* faq */
 
-    .border-b {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid #042A47;
-    }
-    .border-t {
-        border-top: 1px solid #042A47;
-    }
-    .home-page-faqs-list-bottom-left {
-        margin-top: 35px;
-    }
+            .border-b {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                border-bottom: 1px solid #042A47;
+            }
 
-    .c-grey2 {
-        font-family:PoppinsM;
-        color: #333333;
-        font-size: 24px;
-        transform: rotateZ(90deg);
-    }
+            .border-t {
+                border-top: 1px solid #042A47;
+            }
 
-    .section-padding {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-   .faq-list{
-    width: 100%;
-   }
-   .faq-list summary{
-        cursor: pointer;
-     }
-  
-     .mb-100{
-        margin-bottom: calc(var(--body-font-size) * 1px);
-     }
-     .question-content{
-        font-family: OPPO-Sans !important;
-        color: #101828;
-        font-size: calc(var(--body-font-size) * .28px);
-        font-weight: 500;
-     }
-     .answer-content{
-        font-family: OPPO-Sans !important;
-        color: #333333;
-        font-weight: 400;
-        padding: 12px calc(var(--body-font-size) * .47px) 0;
-        font-size: calc(var(--body-font-size) * .24px);
-     }
-     .icon-rotate{
-    transform: rotate(270deg);
-    transition: transform .4s ease-in-out,opacity .3s ease-in-out;
-     }
-     .svg-w-h{
-        width: calc(var(--body-font-size) * .26px);
-        height: calc(var(--body-font-size) * .26px);
-        flex-shrink:0;
-     }
-     .download-channels-hover :hover{
-  opacity: .6;
-     }
-     .p-20{
-        padding: 0 20px;
-     }
+            .home-page-faqs-list-bottom-left {
+                margin-top: 35px;
+            }
+
+            .c-grey2 {
+                font-family: PoppinsM;
+                color: #333333;
+                font-size: 24px;
+                transform: rotateZ(90deg);
+            }
+
+            .section-padding {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .faq-list {
+                width: 100%;
+            }
+
+            .faq-list summary {
+                cursor: pointer;
+            }
+
+            .mb-100 {
+                margin-bottom: calc(var(--body-font-size) * 1px);
+            }
+
+            .question-content {
+                font-family: OPPO-Sans !important;
+                color: #101828;
+                font-size: calc(var(--body-font-size) * .28px);
+                font-weight: 500;
+            }
+
+            .answer-content {
+                font-family: OPPO-Sans !important;
+                color: #333333;
+                font-weight: 400;
+                padding: 12px calc(var(--body-font-size) * .47px) 0;
+                font-size: calc(var(--body-font-size) * .24px);
+            }
+
+            .icon-rotate {
+                transform: rotate(270deg);
+                transition: transform .4s ease-in-out, opacity .3s ease-in-out;
+            }
+
+            .svg-w-h {
+                width: calc(var(--body-font-size) * .26px);
+                height: calc(var(--body-font-size) * .26px);
+                flex-shrink: 0;
+            }
+
+            .download-channels-hover :hover {
+                opacity: .6;
+            }
+
+            .p-20 {
+                padding: 0 20px;
+            }
+            .swiper-button-next,
+  .swiper-button-prev {
+    color: #21467A; /* 修改文字颜色 */
+  }
+  .max-w-258{
+    max-width:calc(var(--body-font-size) * 2.58px) ;
+  }
+/* prev */
+.checkout-box .owl-carousel .owl-nav button.owl-prev span,.checkout-box .owl-carousel .owl-nav button.owl-next span{
+    font-size: 0 !important;
+}
+.checkout-box .owl-carousel .owl-nav button.owl-prev {
+    background: url(./assets/website/bestAppBox/images/prev.png) no-repeat;
+    left: 0;
+    outline: none;
+}
+.checkout-box .mastery-environment-box .owl-carousel .owl-nav button.owl-prev {
+    left: 2%;
+}
+.checkout-box .owl-carousel .owl-nav button {
+    width: 26px;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 36%;
+}
+/* next */
+.checkout-box .owl-carousel .owl-nav button.owl-next {
+    background: url(./assets/website/bestAppBox/images/next.png) no-repeat;
+    left: auto;
+    right: 0;
+    outline: none;
+}
+.checkout-box .mastery-environment-box .owl-carousel .owl-nav button.owl-next {
+    right: 2%;
+}
+.checkout-box .owl-carousel .owl-nav button {
+    width: 26px;
+    height:46px;
+    left: 0;
+    position: absolute;
+    top: 36%;
+}
             /**
        pc端样式
        */
             @media screen and (min-width: 1450px) {
+                .checkout-box .owl-carousel .owl-nav button.owl-prev {
+        left: -5%;
+    }
+    .checkout-box .owl-carousel .owl-nav button.owl-next{
+        right: -5%;
+    }
                 .know-content-box {
                     width: 100%;
                     position: absolute;
@@ -5878,19 +5956,23 @@
                 .line-height-45 {
                     line-height: calc(var(--body-font-size) * .45px);
                 }
-                .p-max-179{
-            max-width: 179px;
-           }
-           .checkout-box {
-                padding: calc(var(--body-font-size) * 1px) calc(var(--body-font-size) * 2px) calc(var(--body-font-size) * .6px);
-            }
-            .how-box,.faq-box{
-                padding: calc(var(--body-font-size) * 1px) calc(var(--body-font-size) * 2px) calc(var(--body-font-size) * .67px);
-            }
-            
-            .why-choose-box {
-                padding: calc(var(--body-font-size) * .5px) calc(var(--body-font-size) * 2px) calc(var(--body-font-size) * .73px);
-            }
+
+                .p-max-179 {
+                    max-width: 179px;
+                }
+
+                .checkout-box {
+                    padding: calc(var(--body-font-size) * 1px) calc(var(--body-font-size) * 2px) calc(var(--body-font-size) * .6px);
+                }
+
+                .how-box,
+                .faq-box {
+                    padding: calc(var(--body-font-size) * 1px) calc(var(--body-font-size) * 2px) calc(var(--body-font-size) * .67px);
+                }
+
+                .why-choose-box {
+                    padding: calc(var(--body-font-size) * .5px) calc(var(--body-font-size) * 2px) calc(var(--body-font-size) * .73px);
+                }
             }
 
             /* 手机 */
@@ -5905,7 +5987,8 @@
                 .grid-3-box {
                     grid-template-columns: 1fr;
                 }
-                .grid-4-box{
+
+                .grid-4-box {
                     grid-template-columns: 1fr 1fr;
                 }
             }
@@ -5916,20 +5999,25 @@
                 .font-size-20,
                 .font-size-24,
                 .font-size-22,
-                .buyNow-btn,.answer-content {
+                .buyNow-btn,
+                .answer-content {
                     font-size: 14px !important;
                 }
-                .grid-4-box{
+
+                .grid-4-box {
                     grid-template-columns: 1fr;
                 }
+
                 .m-padding-20 {
                     padding-left: calc(var(--body-font-size) * .2px);
                     padding-right: calc(var(--body-font-size) * .2px);
                 }
-                .checkout-box{
-                padding: 20px !important;
-            }
-            .pdf-img {
+
+                .checkout-box {
+                    padding: 20px !important;
+                }
+
+                .pdf-img {
                     width: calc(var(--body-font-size) * 1.29px);
                 }
             }
@@ -5975,13 +6063,13 @@
                                             <div class="flex-box">
                                                 <a href="#" target="_blank" class="download-channels-hover">
                                                     <img src="./assets/website/bestAppBox/images/Google.png"
-                                                    class="img-max-230 mr-8">
+                                                        class="img-max-230 mr-8">
                                                 </a>
-                                               <a href="#" target="_blank" class="download-channels-hover">
-                                                <img src="./assets/website/bestAppBox/images/apple.png"
-                                                class="img-max-230">
-                                               </a>
-                                             
+                                                <a href="#" target="_blank" class="download-channels-hover">
+                                                    <img src="./assets/website/bestAppBox/images/apple.png"
+                                                        class="img-max-230">
+                                                </a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -5993,7 +6081,9 @@
                                     <p class="color-main font-size-42 OPPO-Sans font-w-600">Bluetooth & Wi-Fi Connection
                                         Technology</p>
                                 </div>
-                                <p class="color-main text-center font-size-30 OPPO-Sans p-max-w line-height-45 mb-54 p-20">In
+                                <p
+                                    class="color-main text-center font-size-30 OPPO-Sans p-max-w line-height-45 mb-54 p-20">
+                                    In
                                     just 5 steps, it pairs with AlorAir's dehumidifiers. In other words, it Is a faster,
                                     simpler, and more reliable way to connect.</p>
                                 <!-- Swiper -->
@@ -6027,40 +6117,49 @@
                                     maximum compensation and return on investment.</p>
                                 <div class="grid-2-box">
                                     <div class="flex-box flex-c-direction  justify-content-c">
-                                        <h3 class="OPPO-Sans font-size-36 font-w-600 mb-25 line-height wow animate__fadeInLeft" data-wow-duration="1s">Monitor Your
+                                        <h3 class="OPPO-Sans font-size-36 font-w-600 mb-25 line-height wow animate__fadeInLeft"
+                                            data-wow-duration="1s">Monitor Your
                                             Assets Anywhere, Anytime</h3>
-                                        <p class="OPPO-Sans font-size-30 line-height-45 text-color-g line-height wow animate__fadeInLeft" data-wow-duration="1s">Unlike
+                                        <p class="OPPO-Sans font-size-30 line-height-45 text-color-g line-height wow animate__fadeInLeft"
+                                            data-wow-duration="1s">Unlike
                                             Bluetooth, the AlorAir WiFi dehumidifier is compatible with the latest 2.0
                                             Bluetooth Smart Module and easily connects to open cloud services. Whether
                                             you're lounging at home or on vacation, you can monitor the drying progress
                                             of multiple devices from one central location.</p>
                                     </div>
                                     <div class="flex-box justify-content-end align-items-c">
-                                        <img src="./assets/website/bestAppBox/images/Prototype image.png" class="wow animate__fadeInRight" data-wow-duration="1s">
+                                        <img src="./assets/website/bestAppBox/images/Prototype image.png"
+                                            class="wow animate__fadeInRight" data-wow-duration="1s">
                                     </div>
                                     <div class="flex-box justify-content-c align-items-c">
-                                        <img src="./assets/website/bestAppBox/images/Prototype image_3.png"  class="wow animate__fadeInLeft" data-wow-duration="1s">
+                                        <img src="./assets/website/bestAppBox/images/Prototype image_3.png"
+                                            class="wow animate__fadeInLeft" data-wow-duration="1s">
                                     </div>
                                     <div class="flex-box flex-c-direction justify-content-c">
-                                        <h3 class="OPPO-Sans font-size-36 font-w-600 mb-25 line-height wow animate__fadeInRight" data-wow-duration="1s">Track Room
+                                        <h3 class="OPPO-Sans font-size-36 font-w-600 mb-25 line-height wow animate__fadeInRight"
+                                            data-wow-duration="1s">Track Room
                                             Humidity Changes</h3>
-                                        <p class="OPPO-Sans font-size-30 line-height-45 text-color-g line-height wow animate__fadeInRight" data-wow-duration="1s">The
+                                        <p class="OPPO-Sans font-size-30 line-height-45 text-color-g line-height wow animate__fadeInRight"
+                                            data-wow-duration="1s">The
                                             AlorAir WiFi dehumidifier features a built-in temperature and humidity
                                             sensor, providing real-time data through module heartbeat signals. With
                                             clear, easy-to-read app charts, you can view daily, weekly, and monthly
                                             indoor air humidity changes at a glan</p>
                                     </div>
                                     <div class="flex-box flex-c-direction justify-content-c">
-                                        <h3 class="OPPO-Sans font-size-36 font-w-600 mb-25 line-height wow animate__fadeInLeft" data-wow-duration="1s">Smart Alerts:
+                                        <h3 class="OPPO-Sans font-size-36 font-w-600 mb-25 line-height wow animate__fadeInLeft"
+                                            data-wow-duration="1s">Smart Alerts:
                                             Always in Control</h3>
-                                        <p class="OPPO-Sans font-size-30 line-height-45 text-color-g line-height wow animate__fadeInLeft" data-wow-duration="1s">Get
+                                        <p class="OPPO-Sans font-size-30 line-height-45 text-color-g line-height wow animate__fadeInLeft"
+                                            data-wow-duration="1s">Get
                                             instant push notifications for offline devices, filter replacements,
                                             and equipment faults—so you can act fast and avoid downtime. Proactive
                                             alerts mean fewer surprises and smoother operations, keeping your
                                             dehumidifiers running at peak performance.</p>
                                     </div>
                                     <div class="flex-box justify-content-c align-items-c">
-                                        <img src="./assets/website/bestAppBox/images/Prototype image_2.png" class="wow animate__fadeInRight" data-wow-duration="1s">
+                                        <img src="./assets/website/bestAppBox/images/Prototype image_2.png"
+                                            class="wow animate__fadeInRight" data-wow-duration="1s">
                                     </div>
                                 </div>
                             </div>
@@ -6110,175 +6209,251 @@
                                     Popular App-Compatible Models</h2>
                                 <p class="OPPO-Sans font-size-42 font-w-600 color-main line-height text-center mb-68">
                                     Enjoy 20% Off Now!</p>
-                                <div class="grid-4-box">
-                                    <a href="#">
-                                        <div class="product-item flex-box flex-c-direction justify-content-c align-items-c">
-                                      
-                                            <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179">AlorAir® Storm Elite</h3>
-                                            <img src="./assets/website/bestAppBox/images/image 2255.png" class="img-max-258 mb-18">
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at Saturation, 125 PPD@AHAM</p>
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
-                                        </div>
-                                    </a>
+                                <!-- Swiper -->
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item">   <div
+                                        class="product-item flex-box flex-c-direction justify-content-c align-items-c">
+
+                                        <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179"><a href="#">AlorAir® Storm Elite</a>
+                                           </h3>
+                                           <a href="#">
+                                            <img src="./assets/website/bestAppBox/images/image 2255.png"
+                                            class="img-max-258 mb-18">
+                                           </a>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at
+                                            Saturation, 125 PPD@AHAM</p>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
+                                    </div></div>
+                                    <div class="item">   <div
+                                        class="product-item flex-box flex-c-direction justify-content-c align-items-c">
+
+                                        <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179"><a href="#">AlorAir® Storm Elite</a>
+                                           </h3>
+                                           <a href="#">
+                                            <img src="./assets/website/bestAppBox/images/image 2255.png"
+                                            class="img-max-258 mb-18">
+                                           </a>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at
+                                            Saturation, 125 PPD@AHAM</p>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
+                                    </div></div>
+                                    <div class="item">   <div
+                                        class="product-item flex-box flex-c-direction justify-content-c align-items-c">
+
+                                        <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179"><a href="#">AlorAir® Storm Elite</a>
+                                           </h3>
+                                           <a href="#">
+                                            <img src="./assets/website/bestAppBox/images/image 2255.png"
+                                            class="img-max-258 mb-18">
+                                           </a>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at
+                                            Saturation, 125 PPD@AHAM</p>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
+                                    </div></div>
+                                    <div class="item">   <div
+                                        class="product-item flex-box flex-c-direction justify-content-c align-items-c">
+
+                                        <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179"><a href="#">AlorAir® Storm Elite</a>
+                                           </h3>
+                                           <a href="#">
+                                            <img src="./assets/website/bestAppBox/images/image 2255.png"
+                                            class="img-max-258 mb-18">
+                                           </a>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at
+                                            Saturation, 125 PPD@AHAM</p>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
+                                    </div></div>
+                                    <div class="item">   <div
+                                        class="product-item flex-box flex-c-direction justify-content-c align-items-c">
+
+                                        <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179"><a href="#">AlorAir® Storm Elite</a>
+                                           </h3>
+                                           <a href="#">
+                                            <img src="./assets/website/bestAppBox/images/image 2255.png"
+                                            class="img-max-258 mb-18">
+                                           </a>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at
+                                            Saturation, 125 PPD@AHAM</p>
+                                        <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
+                                        <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
+                                    </div></div>
                                   
-                                    <a href="#">
-                                        <div class="product-item flex-box flex-c-direction justify-content-c align-items-c">
-                                      
-                                            <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179">AlorAir® Storm Elite</h3>
-                                            <img src="./assets/website/bestAppBox/images/image 2255.png" class="img-max-258 mb-18">
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at Saturation, 125 PPD@AHAM</p>
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="product-item flex-box flex-c-direction justify-content-c align-items-c">
-                                      
-                                            <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179">AlorAir® Storm Elite</h3>
-                                            <img src="./assets/website/bestAppBox/images/image 2255.png" class="img-max-258 mb-18">
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at Saturation, 125 PPD@AHAM</p>
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
-                                        </div>
-                                    </a>
-                                    <a href="#">
-                                        <div class="product-item flex-box flex-c-direction justify-content-c align-items-c">
-                                      
-                                            <h3 class="OPPO-Sans font-size-26 font-w-500 text-center mb-18 p-max-179">AlorAir® Storm Elite</h3>
-                                            <img src="./assets/website/bestAppBox/images/image 2255.png" class="img-max-258 mb-18">
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Capacity:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69 mb-5 text-center">270 PPD at Saturation, 125 PPD@AHAM</p>
-                                             <p class="OPPO-Sans font-size-22 color-33 mb-5">Size for:</p>
-                                             <p class="OPPO-Sans font-size-20 color-69">3000 sq.ft</p>
-                                        </div>
-                                    </a>
                                 </div>
+                         
                             </div>
                             <div class="how-box">
-                             <p class="OPPO-Sans font-size-42 font-w-600 text-center mb-68">How It Works?</p>
-                             <div class="grid-2-box">
-                                <div>
-                                    <div class="mb-75">
-                                        <iframe width="100%" height="auto"
-                                            src="https://www.youtube.com/embed/efIlTbvgPlg"
-                                            title="AirWerx 65X Crawlspace Commercial Dehumidifier" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <div class="youtube-text">
-                                            <p class="OPPO-Sans font-w-600 font-size-24 color-w">AlorAir-Lite WiFi Connect for Small LCD Screen Dehumidifier</p>
+                                <p class="OPPO-Sans font-size-42 font-w-600 text-center mb-68">How It Works?</p>
+                                <div class="grid-2-box">
+                                    <div>
+                                        <div class="mb-75">
+                                            <iframe width="100%" height="auto"
+                                                src="https://www.youtube.com/embed/efIlTbvgPlg"
+                                                title="AirWerx 65X Crawlspace Commercial Dehumidifier" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                            <div class="youtube-text">
+                                                <p class="OPPO-Sans font-w-600 font-size-24 color-w">AlorAir-Lite WiFi
+                                                    Connect for Small LCD Screen Dehumidifier</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="./assets/website/bestAppBox/pdf/AlorAir-R APP WI-FI Storm LGR Extreme CONNECTION GUIDE-ANDROID Outline(2).pdf"
+                                                target="_blank" download class="flex-box align-items-c">
+                                                <img src="./assets/website/bestAppBox/images/pdf-load.png"
+                                                    class="mr-41 pdf-img">
+                                                <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-Lite
+                                                    APP WI-FI connection guide, suitable for intelligent digital display
+                                                    control panel, compatible with IOS and Android</p>
+                                            </a>
                                         </div>
                                     </div>
                                     <div>
-                                        <a href="./assets/website/bestAppBox/pdf/AlorAir-R APP WI-FI Storm LGR Extreme CONNECTION GUIDE-ANDROID Outline(2).pdf" target="_blank" download class="flex-box align-items-c">
-                                            <img src="./assets/website/bestAppBox/images/pdf-load.png"
-                                                class="mr-41 pdf-img">
-                                            <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-Lite APP WI-FI connection guide, suitable for intelligent digital display control panel, compatible with IOS and Android</p>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="mb-75">
-                                        <iframe width="100%" height="auto"
-                                            src="https://www.youtube.com/embed/efIlTbvgPlg"
-                                            title="AirWerx 65X Crawlspace Commercial Dehumidifier" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                        <div class="youtube-text">
-                                            <p class="OPPO-Sans font-w-600 font-size-24 color-w">AlorAir-Lite WiFi Connect for Big LCD Screen Dehumidifier</p>
+                                        <div class="mb-75">
+                                            <iframe width="100%" height="auto"
+                                                src="https://www.youtube.com/embed/efIlTbvgPlg"
+                                                title="AirWerx 65X Crawlspace Commercial Dehumidifier" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                            <div class="youtube-text">
+                                                <p class="OPPO-Sans font-w-600 font-size-24 color-w">AlorAir-Lite WiFi
+                                                    Connect for Big LCD Screen Dehumidifier</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="./assets/website/bestAppBox/pdf/AlorAir-R APP WI-FI Storm SLGR 1250X CONNECTION GUIDE-ANDROID Outline(2).pdf"
+                                                target="_blank" download class="flex-box align-items-c">
+                                                <img src="./assets/website/bestAppBox/images/pdf-load.png"
+                                                    class="mr-41 pdf-img">
+                                                <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-Lite
+                                                    APP WI-FI connection guide, suitable for simple digital display
+                                                    control panel, compatible with IOS and Android</p>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div>
-                                        <a href="./assets/website/bestAppBox/pdf/AlorAir-R APP WI-FI Storm SLGR 1250X CONNECTION GUIDE-ANDROID Outline(2).pdf" target="_blank" download class="flex-box align-items-c">
-                                            <img src="./assets/website/bestAppBox/images/pdf-load.png"
-                                                class="mr-41 pdf-img">
-                                            <p class="OPPO-Sans font-size-26 line-height-150 color-b">AlorAir-Lite APP WI-FI connection guide, suitable for simple digital display control panel, compatible with IOS and Android</p>
-                                        </a>
-                                    </div>
                                 </div>
-                             </div>
                             </div>
                             <div class="faq-box">
-                               <p class="OPPO-Sans font-size-42 font-w-700 line-height text-center mb-60">FAQ</p>
-                               <div class="faq-list" data-type="1">
-                                <details class="border-b border-t">
-                                    <summary class="flex sb c-blue align-center bold">
-                                        <span class="question-content">Q1: Does it support older models?</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="svg-w-h">
-                                            <path d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z" fill="#383838"/>
-                                          </svg>
-                                    </summary>
-                                    <div class="pt-smm lh-m mb-s ph-s answer-content">
-                                        If your air scrubber isn't working, start by making sure the power cord is securely plugged in and the indicator light is on.  If the light is off or the cord looks damaged, the power cord may need to be replaced.
-                                    </div>
-                                </details>
-                                <details class="border-b">
-                                    <summary class="flex sb c-blue align-center bold">
-                                        <span class="question-content">Q2: What should I do if I don't receive the activation email?</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="svg-w-h">
-                                            <path d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z" fill="#383838"/>
-                                          </svg>
-                                    </summary>
-                                    <div class="pt-smm lh-m mb-s ph-s answer-content">
-                                        Generally speaking, the best MERV filter rating for your home is between 8-10. These filters will
-                                        capture most airborne particles and improve indoor air quality without significantly increasing your
-                                        energy costs.
-                                    </div>
-                                </details>
-                            
-                                <details class="border-b">
-                                    <summary class="flex sb c-blue align-center bold">
-                                        <span class="question-content">Q3: What to do when the dehumidifier fails to connect?</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="svg-w-h">
-                                            <path d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z" fill="#383838"/>
-                                          </svg>
-                                    </summary>
-                                    <div class="pt-smm lh-m mb-s ph-s answer-content">
-                                        If you're using a higher MERV rated air filter, you should change it even more frequently.
-                                    </div>
-                                </details>
-                                <details class="border-b">
-                                    <summary class="flex sb c-blue align-center bold">
-                                        <span class="question-content">Q4: What's the difference between nearby devices and my device?</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="svg-w-h">
-                                            <path d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z" fill="#383838"/>
-                                          </svg>
-                                    </summary>
-                                    <div class="pt-smm lh-m mb-s ph-s answer-content">
-                                        Replacing the filter is simple. First, turn off the power to the unit. Locate the area with the air
-                                        filter near the air supply and remove the plate. Then remove the spent filter. Check the airflow
-                                        arrows and install the new filter. Make sure the airflow arrow on the filter is pointing toward the
-                                        unit, then replace the cover. Finally, turn on the unit.
-                                    </div>
-                                </details>
-                                <details class="border-b">
-                                    <summary class="flex sb c-blue align-center bold">
-                                        <span class="question-content">Q5: What is 2.4GHz Wi-Fi?</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="svg-w-h">
-                                            <path d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z" fill="#383838"/>
-                                          </svg>
-                                    </summary>
-                                    <div class="pt-smm lh-m mb-s ph-s answer-content">
-                                        We allow returns within 30 days of your order. Please fill out the return form you received with
-                                        your order and send the goods to the address we provide. Learn more about the return policy here.
-                                    </div>
-                                </details>
-                                <details class="border-b mb-100">
-                                    <summary class="flex sb c-blue align-center bold">
-                                        <span class="question-content">Q6: What is the app's privacy policy?</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" class="svg-w-h">
-                                            <path d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z" fill="#383838"/>
-                                          </svg>
-                                    </summary>
-                                    <div class="pt-smm lh-m mb-s ph-s answer-content">
-                                        We allow returns within 30 days of your order. Please fill out the return form you received with
-                                        your order and send the goods to the address we provide. Learn more about the return policy here.
-                                    </div>
-                                </details>
-                            </div>
+                                <p class="OPPO-Sans font-size-42 font-w-700 line-height text-center mb-60">FAQ</p>
+                                <div class="faq-list" data-type="1">
+                                    <details class="border-b border-t">
+                                        <summary class="flex sb c-blue align-center bold">
+                                            <span class="question-content">Q1: Does it support older models?</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none" class="svg-w-h">
+                                                <path
+                                                    d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z"
+                                                    fill="#383838" />
+                                            </svg>
+                                        </summary>
+                                        <div class="pt-smm lh-m mb-s ph-s answer-content">
+                                            If your air scrubber isn't working, start by making sure the power cord is
+                                            securely plugged in and the indicator light is on. If the light is off or
+                                            the cord looks damaged, the power cord may need to be replaced.
+                                        </div>
+                                    </details>
+                                    <details class="border-b">
+                                        <summary class="flex sb c-blue align-center bold">
+                                            <span class="question-content">Q2: What should I do if I don't receive the
+                                                activation email?</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none" class="svg-w-h">
+                                                <path
+                                                    d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z"
+                                                    fill="#383838" />
+                                            </svg>
+                                        </summary>
+                                        <div class="pt-smm lh-m mb-s ph-s answer-content">
+                                            Generally speaking, the best MERV filter rating for your home is between
+                                            8-10. These filters will
+                                            capture most airborne particles and improve indoor air quality without
+                                            significantly increasing your
+                                            energy costs.
+                                        </div>
+                                    </details>
+
+                                    <details class="border-b">
+                                        <summary class="flex sb c-blue align-center bold">
+                                            <span class="question-content">Q3: What to do when the dehumidifier fails to
+                                                connect?</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none" class="svg-w-h">
+                                                <path
+                                                    d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z"
+                                                    fill="#383838" />
+                                            </svg>
+                                        </summary>
+                                        <div class="pt-smm lh-m mb-s ph-s answer-content">
+                                            If you're using a higher MERV rated air filter, you should change it even
+                                            more frequently.
+                                        </div>
+                                    </details>
+                                    <details class="border-b">
+                                        <summary class="flex sb c-blue align-center bold">
+                                            <span class="question-content">Q4: What's the difference between nearby
+                                                devices and my device?</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none" class="svg-w-h">
+                                                <path
+                                                    d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z"
+                                                    fill="#383838" />
+                                            </svg>
+                                        </summary>
+                                        <div class="pt-smm lh-m mb-s ph-s answer-content">
+                                            Replacing the filter is simple. First, turn off the power to the unit.
+                                            Locate the area with the air
+                                            filter near the air supply and remove the plate. Then remove the spent
+                                            filter. Check the airflow
+                                            arrows and install the new filter. Make sure the airflow arrow on the filter
+                                            is pointing toward the
+                                            unit, then replace the cover. Finally, turn on the unit.
+                                        </div>
+                                    </details>
+                                    <details class="border-b">
+                                        <summary class="flex sb c-blue align-center bold">
+                                            <span class="question-content">Q5: What is 2.4GHz Wi-Fi?</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none" class="svg-w-h">
+                                                <path
+                                                    d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z"
+                                                    fill="#383838" />
+                                            </svg>
+                                        </summary>
+                                        <div class="pt-smm lh-m mb-s ph-s answer-content">
+                                            We allow returns within 30 days of your order. Please fill out the return
+                                            form you received with
+                                            your order and send the goods to the address we provide. Learn more about
+                                            the return policy here.
+                                        </div>
+                                    </details>
+                                    <details class="border-b mb-100">
+                                        <summary class="flex sb c-blue align-center bold">
+                                            <span class="question-content">Q6: What is the app's privacy policy?</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                viewBox="0 0 26 26" fill="none" class="svg-w-h">
+                                                <path
+                                                    d="M22.0314 10.7609H15.2293V3.95879C15.2293 2.70703 14.2137 1.69141 12.9619 1.69141C11.7102 1.69141 10.6945 2.70703 10.6945 3.95879V10.7609H3.89238C2.64063 10.7609 1.625 11.7766 1.625 13.0283C1.625 14.2801 2.64063 15.2957 3.89238 15.2957H10.6945V22.0979C10.6945 23.3496 11.7102 24.3652 12.9619 24.3652C14.2137 24.3652 15.2293 23.3496 15.2293 22.0979V15.2957H22.0314C23.2832 15.2957 24.2988 14.2801 24.2988 13.0283C24.2988 11.7766 23.2832 10.7609 22.0314 10.7609Z"
+                                                    fill="#383838" />
+                                            </svg>
+                                        </summary>
+                                        <div class="pt-smm lh-m mb-s ph-s answer-content">
+                                            We allow returns within 30 days of your order. Please fill out the return
+                                            form you received with
+                                            your order and send the goods to the address we provide. Learn more about
+                                            the return policy here.
+                                        </div>
+                                    </details>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -7290,7 +7465,7 @@
     <script>
         // 这里写js
 
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".app-content-box .mySwiper", {
             slidesPerView: 3,
             slidesPerView: "auto",
             spaceBetween: 30,
@@ -7305,22 +7480,38 @@
             },
         });
 
+        $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:16,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
         var wow = new WOW(
-  {
-    boxClass:     'wow',      // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset:       0,          // distance to the element when triggering the animation (default is 0)
-    mobile:       true,       // trigger animations on mobile devices (default is true)
-    live:         true,       // act on asynchronously loaded content (default is true)
-    callback:     function(box) {
-      // the callback is fired every time an animation is started
-      // the argument that is passed in is the DOM node being animated
-    },
-    scrollContainer: null,    // optional scroll container selector, otherwise use window,
-    resetAnimation: true,     // reset animation on end (default is true)
-  }
-);
-wow.init();
+            {
+                boxClass: 'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: 0,          // distance to the element when triggering the animation (default is 0)
+                mobile: true,       // trigger animations on mobile devices (default is true)
+                live: true,       // act on asynchronously loaded content (default is true)
+                callback: function (box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null,    // optional scroll container selector, otherwise use window,
+                resetAnimation: true,     // reset animation on end (default is true)
+            }
+        );
+        wow.init();
     </script>
 </body>
 
